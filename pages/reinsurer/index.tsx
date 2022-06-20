@@ -141,7 +141,10 @@ const Index: NextPage = () => {
                         <Divider/>
                         <Row>
                             <Col span={8}>
-                                <p>{reinsurerTerm.price}</p>
+                                <p>{
+                                    // reinsurerTerm.price
+                                    reinsurerTerm.share
+                                }</p>
                             </Col>
                             <Col span={14} offset={1}>
                                 <p>{reinsurerTerm.share}</p>

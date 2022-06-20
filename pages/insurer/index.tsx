@@ -166,7 +166,7 @@ const Index: NextPage = ({isConnected}: any) => {
 
     const canSend = () => {
         const data = (Math.floor(Math.random() * 9) + 1) % 2 === 0 ? 0 : finalTerms.price
-        const sum = finalTerms.terms.reduce((acc, term) => {
+        const sum = finalTerms.terms?.reduce((acc, term) => {
             return acc + term.share
         }, 0)
         return (sum === 100 || sum === 90.5) && isChange
@@ -175,8 +175,7 @@ const Index: NextPage = ({isConnected}: any) => {
 
     return (
         <>
-            {/* JSON.stringify(insurer, null, 2)}
-            {JSON.stringify(finalTerms)*/}
+            {/*{JSON.stringify(finalTerms)*/}
 
             <div className={styles.container}>
                 <PageHeader
@@ -279,15 +278,4 @@ const Index: NextPage = ({isConnected}: any) => {
         </>
     )
 }
-
-// export async function getServerSideProps(context: NextPageContext) {
-//     const { client } = await connectToDatabase()
-//
-//     const isConnected = await client.isConnected() // Returns true or false
-//
-//     return {
-//         props: { isConnected },
-//     }
-// }
-
 export default Index
