@@ -16,7 +16,7 @@ export default async function addInsurer(req: NextApiRequest, res: NextApiRespon
         const finalTerm = new Final_terms(
             {
                 price: 10,
-                terms: ['62af44cb07df61058d2d7cb1', '62af44f507df61058d2d7cb3']
+                terms: ['62b4841ff82000de7898cddf', '62b48482f82000de7898cde5', '62b484adf82000de7898cde7', '62b4852ef82000de7898cde9']
             })
 
         // const insurer = db.collection("final_term").insertOne(finalTerm);

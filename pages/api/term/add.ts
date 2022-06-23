@@ -14,7 +14,7 @@ export default async function addTerm(req: NextApiRequest, res: NextApiResponse)
 
         const finalTerm = new Term(
             {
-                reinsurer:  '62ac8884999a8a69ef6a430c', // req.body.reinsurer,
+                reinsurer:  '62b02282eada3fc45179527f', // req.body.reinsurer,
                 share: 30, // req.body.share
             })
 

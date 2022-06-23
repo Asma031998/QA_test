@@ -56,12 +56,6 @@ const Index: NextPage = () => {
             setReinsurer(user)
             let res =  getFinalTerm(user?._id).then(res => res)
 
-            // setReinsurerTerm({
-            //     ...res
-            // })
-
-            console.log({res})
-            console.log({user})
         } else {
             Router.push('/')
         }
@@ -91,7 +85,6 @@ const Index: NextPage = () => {
             })
         })
         const price = await result.json()
-        console.log({data, id})
         setReinsurerTerm({
             id: data.data?._id,
             share: data.data?.share,

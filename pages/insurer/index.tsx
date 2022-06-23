@@ -55,7 +55,6 @@ const Index: NextPage = ({isConnected}: any) => {
         try {
             const values = await form.validateFields()
             const {_id: id, price} = finalTerms
-            console.log(values)
             const res = await fetch('/api/finalTerms/update', {
                 method: 'POST',
                 headers: {
@@ -79,8 +78,6 @@ const Index: NextPage = ({isConnected}: any) => {
                     })
                 })
             })
-
-            console.log({res})
         } catch
             (errorInfo) {
             console.log('Failed:', errorInfo)

@@ -16,7 +16,7 @@ export default async function listFinalterm(req: NextApiRequest, res: NextApiRes
         const final_term = await Final_terms.find({  }, '_id price terms ')
             .populate({
                     path: 'terms',
-                    // model: 'Term',
+                    model: 'Term',
                     populate: {
                         path: 'reinsurer',
                         model: 'Insurer',
