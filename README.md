@@ -2,7 +2,16 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, install dependence &  run the development server:
+First, set your BD in .env.local where {DBNAME}:
+
+```bash
+MONGODB_URI=mongodb+srv://mamadou:codedb0@cluster0.rub2l.mongodb.net/{DBNAME}?retryWrites=true&w=majority
+MONGODB_DB={DBNAME}
+
+```
+
+
+Second, install dependence &  run the development server:
 
 ```bash
 npm install 
@@ -12,7 +21,16 @@ npm run dev
 yarn install
 
 yarn dev
+
 ```
+Third , init BD in that order
+
+```bash
+localhost/3000/api/insurer/init
+localhost/3000/api/term/init
+localhost/3000/api/finalTerms/init
+```
+
 
 connect insurer credentials: ` username: insurer@gmail.com, password: 123`
 connect reinsurer credentials: 

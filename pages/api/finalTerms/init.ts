@@ -21,7 +21,7 @@ export default async function addInsurer(req: NextApiRequest, res: NextApiRespon
         });
 
 
-        res.json({ insurer: finalTerms } );
+        res.json({finalTerms } );
     } catch (error) {
         console.log(error);
         res.json({ error });

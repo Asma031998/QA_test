@@ -128,7 +128,7 @@ const Index: NextPage = ({isConnected}: any) => {
             })
         })
         const data = await res.json()
-        console.log(data)
+        // console.log(data)
     }
 
     useEffect(() => {
@@ -136,7 +136,7 @@ const Index: NextPage = ({isConnected}: any) => {
         const user = getUserData()
         if (user?.email) {
             setInsurer(user)
-            console.log({user})
+            // console.log({user})
         } else {
             Router.push('/')
         }

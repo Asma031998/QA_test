@@ -14,7 +14,7 @@ export default async function addTerm(req: NextApiRequest, res: NextApiResponse)
 
         const reinsurer = await Insurer.find({type: 'REINSURER'}, {}).then(list => list);
 
-        reinsurer?.map(async (user) => {
+        const term = await  reinsurer?.map(async (user) => {
             // termList.push(term)
             return await Term.create({
                 reinsurer: user?._id, // req.body.reinsurer,
