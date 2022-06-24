@@ -1,4 +1,3 @@
-// import connectMongo from '../../../middleware/connectMongo';
 import connectToDatabase from '../../../middleware/database'
 import Insurer from '../../../models/insurer'
 import Final_terms from '../../../models/final_terms'
@@ -16,15 +15,15 @@ export default async function listFinalterm(req: NextApiRequest, res: NextApiRes
         const final_term = await Final_terms.find({  }, '_id price terms ')
             .populate({
                     path: 'terms',
-                    model: 'Term',
                     populate: {
                         path: 'reinsurer',
-                        model: 'Insurer',
                         match: {
                             $type: 'REINSURER'
                         },
-                        select: 'name email'
+                        select: 'name email',
+                        model: 'Insurer',
                     },
+                model: 'Term'
                 }
             )
         res.json({status: 200, data: final_term[0]})

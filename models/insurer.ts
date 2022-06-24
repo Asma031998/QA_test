@@ -11,7 +11,7 @@ const insurerSchema = new Schema({
     type: {
         type: String,
         enum : ['INSURER' , 'REINSURER'],
-        default: 'INSURER'
+        default: 'REINSURER'
     } ,
 });
 

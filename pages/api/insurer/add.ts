@@ -13,6 +13,7 @@ export default async function addInsurer(req, res) {
             name: 'reinsurer 2',
             email: 'reinsurer2@gmail.com',
         })
+
         const insurer = Insurer.create(insurerModel);
 
         res.json({ insurer });
